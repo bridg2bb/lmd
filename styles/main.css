@@ -1,0 +1,660 @@
+body 
+{
+  margin: 0px;
+  padding: 0px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: grid;
+  align-content: center;
+  grid-template-columns: 1fr;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body.dark{
+  color: white;
+  background-color:rgb(0, 0, 0);
+}
+div
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 9%;
+  padding: 4px;
+  column-gap: 1px;
+  row-gap: 1px;
+  height: calc(100vh - 8px);
+  width: calc(100vw - 8px);
+}
+
+.wrapper .textFrame 
+{
+   grid-column-start: 1;
+   grid-column-end: 4;
+   grid-row-start: 3;
+   grid-row-end: 7;
+   border: 1px black solid;
+   padding: 2px;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   margin-right: 25px;
+}
+
+body.dark .wrapper .textFrame
+{
+  border: 1px white solid;
+}
+
+.wrapper .textFrame.expanded
+{
+  grid-column-end: 6;
+  margin-right: 26px
+
+}
+
+.wrapper .characterInfoFrame
+{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border: 1px black solid;
+  padding: 2px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: calc((20%-4px));
+}
+
+body.dark .wrapper .characterInfoFrame
+{
+  border: 1px white solid;
+}
+
+.wrapper .playerHeader-expanded
+{
+  border: 1px black solid;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 7;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body.dark .wrapper .playerHeader-expanded
+{
+  border: 1px white solid;
+}
+
+
+
+.wrapper .playerHeader-hidden
+{
+  display: none;
+}
+#playerHeaderButtonContainer
+{
+  position: absolute;
+  margin-left: -25px;
+  margin-top: -1px;
+}
+.characterInfoButton 
+{
+    display: block;
+    margin: 0px;
+    width: 25px;
+    border: 1px solid black;
+    font-size: small;
+    color:#DDD;
+    background-color: #666;
+
+    height: 25px;
+}
+
+body.dark .characterInfoButton
+{
+   border: 1px solid white;
+}
+
+.selected
+{
+  color: black;
+  border-right: none;
+  background-color: white;
+
+}
+
+
+body.dark .selected
+{
+  background-color: black;
+  border-right: none;
+  color: white;
+}
+
+
+
+
+#btnCollapsePlayerHeader {
+  color: black;
+  margin-bottom: 25px;
+  background-color: white;
+}
+
+
+body.dark #btnCollapsePlayerHeader
+{
+  background-color: black;
+  color: white;
+}
+
+
+
+
+
+.characterInfo
+{
+  grid-template-columns:  auto;
+  grid-auto-rows: minmax(20px, auto);
+  font-size: small;
+  display: grid;
+}
+#playerHeader-settings
+{
+  grid-template-columns: 100%;
+}
+
+#divCurrentSave
+{
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+
+
+.settings-button
+{
+  background-color: #333;
+  border: 1px white solid;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.settings-button.selected
+{
+  background-color: #666;
+  border: 1px black solid;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+  -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+       box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+body.dark .settings-button.selected
+{
+  border: 1px white solid;
+}
+
+.wrapper .directionFrame
+{
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border: 1px black solid;
+  padding: 2px;
+  display: grid;
+  grid-template-columns:  repeat(3, 1fr);
+  grid-template-rows:  repeat(3, 1fr);
+  grid-auto-rows: 33%;
+  grid-auto-columns: calc(33% - 4px);
+  column-gap: 1px;
+  row-gap: 1px;
+}
+
+body.dark .wrapper .directionFrame
+{
+  border: 1px white solid;
+}
+.wrapper .toolBar
+{
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 7;
+  grid-row-end: 11;
+  border: 1px black solid;
+  display: grid;
+  grid-template-columns:  calc(100% - 1px);
+  grid-auto-rows: calc(20% - 1px);
+  column-gap: 1px;
+  row-gap: 1px;
+
+}
+
+body.dark .wrapper .toolBar
+{
+  border: 1px white solid;
+}
+
+#loadingOverlay
+{
+  position: absolute; 
+  width:100%; 
+  height:100%;
+  opacity: 40%;
+  background-color: #333; 
+  z-index: 100;
+  display: none;
+}
+
+#loadingDialog
+{
+  display: block;
+  position:absolute;
+  left: 12.5%;
+  right: 12.5%;
+  height: 150px;
+  top: 25%;
+  bottom: 25%;
+  background-color: white;
+  border-radius: 10px;
+  opacity: 100%;
+  margin: auto;
+  z-index: 101;
+  display: none;
+}
+
+body.dark #loadingDialog
+{
+  background-color: black;
+  color: white;
+}
+#loadingDialog .content-container
+{
+  position:absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  padding: 20px;
+  margin: auto;
+  height: 50px;
+}
+.rotate-45-backwards 
+{
+  transform: rotate(
+    -45deg);
+}
+
+.rotate-45-forward
+{
+  transform: rotate(
+    45deg);
+}
+
+
+
+.gold {
+  color:goldenrod;
+}
+
+
+.btn
+{
+  align-items: center; 
+  display: flex;
+  justify-content: space-around;
+  background-color: #333; 
+  border: 1px white solid;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 2px;
+}
+.btn-navigation
+{
+  padding: 0px;
+}
+
+.btn-toolbar
+{ 
+  justify-content: left;
+}
+
+
+.disabled 
+{
+  cursor:not-allowed;
+  
+  background-color: rgb(97, 96, 96); 
+  color: #333;
+
+}
+
+
+.wrapper .textFrame textarea
+{
+  margin: 0px;
+  overflow:scroll;
+  border: none;
+  overflow-x:hidden;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+}
+
+
+
+.health
+{
+  background-color: rgb(143, 11, 11);
+  color: white;
+  margin: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  height: 15px;
+}
+
+
+
+.dex
+{
+  background-color: rgb(80, 49, 167);
+  color: white;
+  margin: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  height: 15px;
+}
+
+
+.str
+{
+  background-color: rgb(25, 85, 92);
+  color: white;
+  margin: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  height: 15px;
+}
+
+.exp
+{
+  background-color: rgb(182, 139, 30);
+  color: white;
+  margin: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align: center;
+  height: 15px;
+}
+
+.loading
+{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  margin: 0px;
+  padding: 2px;
+  text-align: center;
+  height: 15px;
+}
+
+
+
+.str-bar, .dex-bar, .health-bar, .exp-bar, .loading-bar
+{
+  background-color:rgb(97, 96, 96);
+  position: relative;
+  padding: 0px;  
+  border: 1px solid black;
+}
+
+
+
+.bar-text
+{
+  float:right;
+  color: white;
+  padding-right: 5px;
+  font-size: small;
+}
+
+.bar-value
+{
+  height: calc(100% - 4px);
+}
+
+.characterInfo-label
+{
+  font-weight: bold;
+  border-right: 1px solid rgb(97, 96, 96);
+  display: grid;
+  padding: 4px;
+  margin: 0px;
+  
+}
+
+
+
+.characterInfo-value
+{
+  display: grid;
+  padding: 4px;
+  padding-left: 15px;
+  margin: 0px;
+}
+
+.gameMessage {
+  min-height: 20px;
+  margin: 5px;
+  padding: 5px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  border-radius: 5px;
+}
+
+
+.previousMessage {
+  background-color: rgb(238, 238, 238);
+  border: 1px solid #666;
+}
+
+body.dark .previousMessage {
+  background-color: #333;
+  border: 1px solid white;
+
+}
+
+
+
+.blankMessage {
+  min-height: 20px;
+  margin: 5px;
+  border: none;
+  background-color:white;
+}
+
+body.dark .blankMessage
+{
+  background-color: black;
+  border-color: black;
+}
+
+.messageTime
+{
+  margin: 0;
+  padding: 5px;
+}
+
+.messageBody {
+  white-space: pre-wrap;
+  padding: 5px;
+  margin: 0;
+}
+
+
+
+#textFrame .currentMessage
+{
+  border:1px solid black;
+  background-color:rgb(239, 245, 125);
+
+}
+
+body.dark #textFrame .currentMessage
+{
+  color: black;
+}
+
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+/* Larger than phablet */
+@media (min-width: 900px) 
+{
+
+  
+  .wrapper .characterInfoFrame
+  {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border: 1px black solid;
+    display: grid;
+    padding: 2px;
+  }
+
+  body.dark .wrapper .characterInfoFrame
+  {
+    border: 1px white soldi;
+  }
+
+  .wrapper .textFrame
+  {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end:11;
+    padding: 2px;
+    margin-right:25px;
+  }
+
+  
+
+  .wrapper .toolBar
+  {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 11;
+    grid-row-end: 11;
+    grid-template-columns:  repeat(5, 1fr);
+    grid-template-rows: subgrid;
+    grid-auto-rows: auto;
+    column-gap: 1px;
+    row-gap: 1px;
+  }
+
+
+
+  .wrapper .directionFrame
+  {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 2px;
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    column-gap: 1px;
+    row-gap: 1px;
+  }
+  
+  .wrapper .playerHeader-expanded
+  {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 11;
+    
+    
+    font-size: small;
+  }
+  .characterInfo
+  {
+    grid-template-columns: 100px auto;
+  }
+
+  .characterInfo-label
+  {
+    justify-content: right;
+    text-align: right;
+  }
+
+  .characterInfo-value
+  {
+    padding-left: 4px; 
+  }
+
+  .gameMessage {
+    display: grid;
+    grid-template-columns: 65px auto;
+    grid-template-rows: 1fr;
+  }
+
+  
+
+  #loadingDialog
+  {
+    width: 50%;
+    left: 25%;
+  }
+  
+ 
+
+
+
+  .btn-toolbar
+  {
+    display: flex;
+  }
+
+  .bar-text
+  {
+    float:left;
+    color: white;
+    padding-left: 5px;
+    font-size: inherit;
+  }
+ 
+  .health, .dex, .str, .exp, .loading
+  {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+ 
+}
+
+

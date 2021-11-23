@@ -1,0 +1,92 @@
+[
+    {
+        "message" : "You found a rusty sword! (Size %0%)",
+        "minSword" : 1,
+        "maxSword" : 3,
+        "weight" : 15
+    },
+    {
+        "message" : "You found a balanced sword! (Size %0%)",
+        "minSword" : 4,
+        "maxSword" : 7,
+        "weight" : 10
+    },
+    {
+        "message" : "You found a great sword! (Size %0%)",
+        "minSword" : 6,
+        "maxSword" : 10,
+        "weight" : 5
+    },
+    {
+        "message" : "You found a magic sword! (Size %0%)",
+        "minSword" : 10,
+        "maxSword" : 30,
+        "weight" : 1
+    },
+    {
+        "message" : "You found a ruby! (Size %0%)",
+        "minGold" : 100,
+        "maxGold" : 150,
+        "weight" : 20
+    },
+    {
+        "message" : "You found a leather armor! (Size %0%)",
+        "minShield" : 150,
+        "maxShield" : 300,
+        "weight" : 20
+    },
+    {
+        "message" : "You found a studded leather armor! (Size %0%)",
+        "minShield" : 300,
+        "maxShield" : 400,
+        "weight" : 15
+    },
+    {
+        "message" : "You found a chainmail! (Size %0%)",
+        "minShield" : 500,
+        "maxShield" : 700,
+        "weight" : 10
+    },
+    {
+        "message" : "You found a breast plate! (Size %0%)",
+        "minShield" : 800,
+        "maxShield" : 1000,
+        "weight" : 5
+    },
+    {
+        "message" : "You found a magical plate! (Size %0%)",
+        "minShield" : 1000,
+        "maxShield" : 2000,
+        "weight" : 1
+    },
+    {
+        "message" : "You stumbled upon a veteran swordsman.",
+        "minExp" : 500,
+        "maxExp" : 750,
+        "weight" : 10
+    },
+    {
+        "message" : "You stumbled upon a grand master swordsman.",
+        "minExp" : 1500,
+        "maxExp" : 2750,
+        "weight" : 1
+    },
+    {
+        "message" : "You found a diamond!",
+        "minGold" : 150,
+        "maxGold" : 200,
+        "weight" : 20
+    },
+    {
+        "message" : "You found a sack of gold!",
+        "minGold" : 500,
+        "maxGold" : 750,
+        "weight" : 10
+    },
+    {
+        "message" : "You found a jewel encrusted crown!",
+        "minGold" : 500,
+        "maxGold" : 750,
+        "weight" : 10
+    }
+]

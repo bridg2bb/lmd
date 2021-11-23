@@ -1,0 +1,29 @@
+[
+    {
+        "name" : "Dwarf",
+        "minHealth" : 300,
+        "maxHealth" : 500,
+        "minStr" : 15,
+        "maxStr" : 20,
+        "minDex" : 10,
+        "maxDex" : 15
+    },
+    {
+        "name" : "Elf",
+        "minHealth" : 150,
+        "maxHealth" : 250,
+        "minStr" : 13,
+        "maxStr" : 25,
+        "minDex" : 20,
+        "maxDex" : 40
+    },
+    {
+        "name" : "Human",
+        "minHealth" : 350,
+        "maxHealth" : 450,
+        "minStr" : 20,
+        "maxStr" : 30,
+        "minDex" : 10,
+        "maxDex" : 20
+    }
+]

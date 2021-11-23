@@ -1,0 +1,48 @@
+[
+    {
+        "date" : "11/13/21",
+        "version" : "0.0.1b",
+        "body" : "*Compeleted basic UI for both view port below 900 and a second interface for viewport above 900. \n*Added basic UI loop for updating UI elements. \n*Added basic options for welcome page and creating character."
+    },
+    {
+        "date" : "11/13/21",
+        "version" : "0.0.5b",
+        "body" : "Added keyboard control and screen reader support"
+    },
+    {
+        "date" : "11/14/21",
+        "version" : "1.0.1b",
+        "body" : "* Added random events for treasure and combat.\n*Created creatures and designed the math needed to generate said creatures.\n*Added hunting and resting \n*Added font awesome for basic iconcs. "
+    },
+    {
+        "date" : "11/15/21",
+        "version" : "1.0.9b",
+        "body" : "* Moved all UI methods into their own class."
+    },
+    {
+        
+        "date" : "11/16/21",
+        "version" : "1.1.0b",
+        "body" : "* Moved combat to its own class.\n\n*Changed race base stats to be more in line with low level creatures\n\n* Made the creature class self-contained and no longer create an anonymous creature object for battles.\n\n* Changed the way messages are sent to the UI to batch send them rather than one at a time. This should improve screen reader experience and cut down on painting of the game messages.\n\n* Fixed bug that made creatures not hit very often.\n\n* Fixed bug that allowed users to move before their character was created which would end in an infinite loop of death.\n\n* Fixed a bug where an out of bounds treasure would be selected resulting in an exception.\n\n* Fixed a bug that allowed for 0 gold or 0 experience from a treasure"
+    },
+    {
+        "date" : "11/17/21",
+        "version" : "1.2.1b",
+        "body" : "* Added towns, which can be found at multiples of 100. Examples (100,100), (200,-200), (-100,-100).\n\n* Fixed a bug that caused a creature's base stats to be increased each time that type of creature was spawned. Making creatures in lower circles become far too big.\n\n* Added named areas to circles."
+    },
+    {
+        "date" : "11/20/21",
+        "version" : "1.5.0b",
+        "body" : "* Added ability to save/load from localStorage.\n\n* Added Dark Mode\n\n* Added ability to collapse character info\n\n* Broke character and inventory into two sections"
+    },
+    {
+        "date" : "11/22/21",
+        "version" : "1.5.2b",
+        "body" : "* Balanced UI elements to fit better on widths as low as 300.\n\n* Fixed a bug that didn't break your armor at the end of its life.\n\n* Fixed a bug that allowed you to buy way too much sword."
+    },
+    {
+        "date" : "11/23/21",
+        "version" : "1.5.3b",
+        "body" : "* Added random finding of swords/armor.\n\n*"
+    }
+]

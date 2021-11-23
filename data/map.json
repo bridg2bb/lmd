@@ -1,0 +1,39 @@
+{
+	"areas": [
+	{ 
+		"startCircle": 0,
+		"endCircle": 2,
+		"name": "Sugar forest"
+	},
+	{ 
+		"startCircle": 2,
+		"endCircle": 4,
+		"name": "Kalahar swamp"
+	},
+	{ 
+		"startCircle": 4,
+		"endCircle": 6,
+		"name": "Red Mountains"
+	},
+	{ 
+		"startCircle": 6,
+		"endCircle": 8,
+		"name": "Red Mountains"
+	},
+	{ 
+		"startCircle": 8,
+		"endCircle": 10,
+		"name": "Plains of despair"
+	},
+	{ 
+		"startCircle": 12,
+		"endCircle": 14,
+		"name": "Demonic valley"
+	},
+	{ 
+		"startCircle": 14,
+		"endCircle": 9999,
+		"name": "Land of unknown"
+	}
+	]
+}
